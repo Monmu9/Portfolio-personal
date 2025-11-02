@@ -1,0 +1,489 @@
+:root {        /*VARIABLES*/
+    --primary-color: hsl(214, 84%, 56%);
+    --text-color: hsl(0, 0%, 31%);
+    --bg-color: hsl(0,0%, 90%);
+    --bg-card-color: hsl(0, 0%, 98%);
+
+    --border-radius: 0.4em;
+
+    --transition: color 0.1s, background-color 0.2s ease-in-out;
+
+    --skills-bar-length: 0%;
+}
+
+
+/*Esto hace que todo tenga un borde*/
+*{
+    box-sizing: border-box;
+}
+
+a {
+    color:var(--primary-color);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display:block;
+}
+
+
+/*Todo el cuerpo de la web*/
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
+    font-family: sans-serif;
+}
+
+
+/*Modo oscuro: cuando se activa se cambia el fondo y las letras*/
+body.dark {
+    --text-color: hsl(0, 0%, 83%);
+    --bg-color: hsl(0, 0%, 15%);
+    --bg-card-color: hsl(0, 0%, 20%);
+}
+
+
+/*La cabeza de la web*/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    padding: 0 1.5em;
+    background-color: var(--bg-card-color);
+    transition: var(--transition);
+}
+
+
+/*Los interruptores*/
+.switches {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.toggle-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.toggle-theme__icon {
+    margin-right: 0.5em;
+    width: 20px;
+}
+
+
+.toggle-theme__text {
+    font-size: 0.8em;
+}
+
+
+/*BANDERAS*/
+.flags {
+    width: 75px;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+
+.flags__item { /*Aquí se ponen las medidas del icono de las banderas*/
+    width: 30px;
+}
+
+
+.flags__img {
+    display: block;
+    cursor: pointer;
+}
+
+
+.colors {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    height: 20px;
+    width: 100px;
+}
+
+
+.colors__item {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--text-color);
+    background-color: var(--primary-color); /* le ponemos el background color con "primary color" y va a hacer que todos los cuadrados se pongan de color azul , y ya nosotros modificamos con los colores que queremos en cada cuadrado. */
+    cursor: pointer;
+}
+
+
+.colors__item--blue {
+    --primary-color: hsl(214, 84%, 56%);
+}
+
+
+.colors__item--green {
+    --primary-color: hsl(150, 84%, 56%);
+}
+
+
+.colors__item--purple {
+    --primary-color: hsl(276, 84%, 56%);
+}
+
+
+.colors__item--orange {
+    --primary-color: hsl(46, 84%, 56%);
+}
+
+
+.title{
+    text-align:center;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+
+/*Esto es como se verá en el móvil, en una columna*/
+.main{
+    display: grid; 
+    padding: 2em;
+    /*movil: una columna*/
+    gap: 0.5em;
+    /*opcional, separación */
+    padding: 2em;
+}
+
+
+/*VERSIÓN ESCRITORIO, media query del main*/
+@media screen and (min-width:720px) {
+    .main{
+        grid-template-columns:min-content 1fr; /*min content es la primera columna, el minimo tamaño necesario para que el contenido entre, y la segunda columna que tenga fr, que es el resto de espacio disponible*/
+    }
+}
+
+
+.column {
+    display: grid;
+    gap: 0.5em;
+}
+
+
+@media screen and (min-width:720px) {
+    .column--right {
+        grid-template-columns: repeat(3, 1fr);
+        /*Esto hace que la columna de la derecha tendra una plantilla de 3 columnas de 1fr */
+        grid-template-rows: repeat(3, min-content);
+        /*Esto hace que ocupe el espacio que el contenido necesite, a más contenido, más ocupará.*/
+        align-items: start; /*Esto hace que las 3 tarjetas de skills adapten el tamaño (el largo hacia abajo) al contenido total de barras de progreso que tiene*/
+    }
+}
+
+
+
+/*Fondo de la columna izquierda, donde está el perfil*/
+.card {
+    padding: 1em;
+    background-color: var(--bg-card-color);
+    border-radius: var(--border-radius);
+    margin-top: 0.8em;
+}
+
+
+.card--profile {
+    margin-bottom: 0.5em;
+}
+
+.card__image-container {
+    min-width: 320px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+
+.card__header {
+    padding: 1em 0;
+}
+
+
+.card__title {
+    margin: 0;
+    margin-bottom: 1em;
+    font-size: 1.2rem;
+}
+
+
+.card__subtitle {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+
+.card__link {
+    margin-bottom: 0.5em;
+}
+
+
+.card__text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+.card__image {
+    min-width: 370px;
+    border-radius: var(--border-radius);
+}
+
+.card__titleBank {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1.2rem;
+}
+
+
+
+@media screen and (min-width: 760px) { /*esto hace que en movil salte de linea y sea vertical*/
+.card--project {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-column: 1 / -1;
+        /*Para que empiece en la columna 1 y termine en la ultima que es la -1*/
+    }
+}
+
+
+
+.skills { 
+    padding: 1em 0;
+}
+
+
+.skills__header {
+    display:flex;
+    justify-content:space-between;
+    width: 175px;
+    margin-left: auto;
+    position:relative;
+    margin-bottom: 5px;
+    top: 20px;
+}
+
+
+.skills__tech { /*nombre de la tecnología*/
+    margin: 0;
+    font-size:0.8rem;
+}
+
+
+.skills__item { /*Este es el bloque que contiene tanto el nombre como la barra de progreso*/
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap: 1em;
+    margin-bottom: 0.5em;
+} 
+
+
+.skills__bar,
+.skills__bar::after { /*Con esto, juntandolos, hacemos que compartan estilos*/
+    position:relative;
+    width: 175px; /*es lo que va a medir la barra*/
+    height: 8px; /*es el alto de la barra*/
+    background-color: #888;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+
+.skills__bar::after { /*con esto creo el relleno de la barra*/
+    content: "";
+    position:absolute;
+    left: -175px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+    animation: skills-bar-fill 2s ease-in-out forwards;
+}
+
+
+.skills__bar--10::after {
+    --skill-bar-length: 10%;
+}
+
+.skills__bar--20::after {
+    --skill-bar-length: 20%;
+}
+
+.skills__bar--30::after {
+    --skill-bar-length: 30%;
+}
+
+.skills__bar--40::after {
+    --skill-bar-length: 40%;
+}
+
+.skills__bar--50::after {
+    --skill-bar-length: 50%;
+}
+
+.skills__bar--60::after {
+    --skill-bar-length: 60%;
+}
+.skills__bar--70::after {
+    --skill-bar-length:70%;
+}
+
+.skills__bar--80::after {
+    --skill-bar-length: 80%;
+}
+
+.skills__bar--90::after {
+    --skill-bar-length: 90%;
+}
+
+
+
+.experience {
+    display: flex;
+    align-items: start;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+
+.experience__image {
+    max-width: 12%;
+    margin-right: 1em; /*esto separa el logo del texto de la fecha de inicio*/
+}
+
+
+.experience__time {
+    font-size: 0.8rem;
+    margin-bottom: 0.5em;
+}
+
+.experience__job {
+    margin: 0;
+    margin-bottom: 0.5em;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+
+.experience__description {
+    font-size: 0.8rem;
+    margin-bottom: 1.5em;
+}
+
+
+.hobbie__title {
+    margin: 0;
+    margin-bottom: 0.5em;
+    margin-top: 0.8em;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+
+
+.project { /*Esto es para que los botones de DEMO y CODE estén dentro de la tarjeta "proyecto".*/
+    position:relative;
+}
+
+
+.card--project {
+    padding-bottom: 4em;/* deja espacio para los botones */
+}
+
+
+/*De esta forma solo se añade el margen entre la imagen y el texto en versión escritorio y no en versión móvil*/
+@media screen and (min-width: 760px) {
+    .project,
+    .project2,
+    .project3   {
+        margin-left: 2em;
+    }
+}
+
+
+.project__tags {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5em 0;
+    font-size: 0.6rem;
+    width: 275px;
+    gap: 8px;
+}
+
+
+/*Aquí estamos haciendo que las tags en la versión escritorio tengan un tamaño de letra mas grande y puedan expandirse un poco mas que en la versión movil*/
+@media screen and (min-width: 760px) {
+.project__tags {
+  width: 325px;
+  font-size: 0.8rem;
+ }
+}
+
+
+.project__tag {
+    padding: 0.4em 0.8em;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    margin-bottom: 1em;
+} 
+
+
+.buttons { /*esta es la posición de los botones del proyecto*/
+    display:flex;
+    justify-content: space-between;
+    width: 225px;
+    margin-top: 1em /*espacio que dejan los botones para colocarse después del texto del proyecto*/
+}
+
+
+@media screen and (min-width: 760px) { /*Aquí configuramos como quedarian los botones DEMO y CODE en la versión escritorio*/
+    .buttons {
+        bottom: 1em;
+    }
+}
+
+.button { /*esto son los estilos de los botones. Los estilos que ambos botones comparten se ponen aquí, los que no individualmente*/
+    width: 100px;
+    line-height: 2.5;
+    text-align: center;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+
+.button--primary { /*esto hace que el de DEMO tenga aspecto de botón*/
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.button--ghost { /*esto hace que el de CODE tenga aspecto de botón*/
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+
+.icon {
+    margin-right: 1em;
+}
+
+
+@keyframes skills-bar-fill {
+    to {
+        transform:translateX(var(--skill-bar-length));
+    }
+}
