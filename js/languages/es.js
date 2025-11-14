@@ -51,6 +51,12 @@ export default {
 
 
     // Proyectos
+    proj0_title: "MMCtech Tienda Gaming (proyecto único Front-end)",
+    proj0_type: "PROYECTO Y CARACTERISTICAS",
+    proj0_desc:
+        "MMCtech es una tienda online de periféricos gaming desarrollada como proyecto académico para la asignatura de Entorno Cliente, por lo que solo incluye Front-end.\nLa funcionalidad principal del proyecto es la implementación de un sistema de carga dinámica de productos mediante AJAX (Fetch API), que permite mostrar productos progresivamente con un botón 'Cargar más' sin necesidad de recargar la página completa.\nEl proyecto incluye filtros por categoría, animaciones suaves, feedback visualconstante al usuario, y un diseño completamente responsive adaptado a móvil, tablet y desktop.\nEstá construido con HTML5 semántico, CSS3 moderno (Grid, Flexbox, Variables CSS) y JavaScript ES6+ (async/await, funciones modulares), utilizando datos en formato JSON que simulan la respuesta de una API real.",
+        
+        
     proj1_title: "MONBANK, Banca Simulada (<u>proyecto en desarrollo</u>)",
     proj1_type: "PROYECTO Y CARACTERISTICAS",
     proj1_desc:

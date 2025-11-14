@@ -51,6 +51,11 @@ export default {
 
 
     // Projects
+    proj0_title: "MMCtech Gaming Store (Front-end only)",
+    proj0_type: "PROJECT OVERVIEW AND FEATURES",
+    proj0_desc:
+        "MMCtech is a gaming e-commerce platform developed as an academic project for my Client-Side Development course.\nThe project's main feature is a dynamic product loading system powered by AJAX (Fetch API), allowing users to browse products progressively via a 'Load More' button—eliminating the need for full page refreshes.\nIt includes category filtering, smooth animations, continuous user feedback, and a fully responsive design that adapts seamlessly to mobile, tablet, and desktop screens.\nThe application is built with semantic HTML5, modern CSS3 techniques (Grid, Flexbox, CSS Variables), and JavaScript ES6+ (async/await, modular architecture), using JSON data to simulate real-world API responses.",
+        
     proj1_title: "MONBANK, Banking Simulation (work in progress)",
     proj1_type: "PROJECT OVERVIEW AND FEATURES",
     proj1_desc:

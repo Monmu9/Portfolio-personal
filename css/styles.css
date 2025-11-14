@@ -406,9 +406,9 @@ body.dark {
 
 /*De esta forma solo se añade el margen entre la imagen y el texto en versión escritorio y no en versión móvil*/
 @media screen and (min-width: 760px) {
-    .project,
-    .project2,
-    .project3   {
+    .project0,
+    .project1,
+    .project2   {
         margin-left: 2em;
     }
 }
