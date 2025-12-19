@@ -1,5 +1,5 @@
 :root {        /*VARIABLES*/
-    --primary-color: hsl(214, 84%, 56%);
+    --primary-color: hsl(194, 75%, 61%);
     --text-color: hsl(0, 0%, 31%);
     --bg-color: hsl(0,0%, 90%);
     --bg-card-color: hsl(0, 0%, 98%);
@@ -42,7 +42,7 @@ body {
 body.dark {
     --text-color: hsl(0, 0%, 83%);
     --bg-color: hsl(0, 0%, 15%);
-    --bg-card-color: hsl(0, 0%, 20%);
+    --bg-card-color: hsl(0, 1%, 27%);
 }
 
 
@@ -394,13 +394,13 @@ body.dark {
 
 
 
-.project { /*Esto es para que los botones de DEMO y CODE estén dentro de la tarjeta "proyecto".*/
+.project { /*Esto es para que el botón de DEMO&CODE esté dentro de la tarjeta "proyecto".*/
     position:relative;
 }
 
 
 .card--project {
-    padding-bottom: 4em;/* deja espacio para los botones */
+    padding-bottom: 1em;/* deja espacio para los botones */
 }
 
 
@@ -408,7 +408,8 @@ body.dark {
 @media screen and (min-width: 760px) {
     .project0,
     .project1,
-    .project2   {
+    .project2,
+    .project3  {
         margin-left: 2em;
     }
 }
@@ -450,7 +451,7 @@ body.dark {
 }
 
 
-@media screen and (min-width: 760px) { /*Aquí configuramos como quedarian los botones DEMO y CODE en la versión escritorio*/
+@media screen and (min-width: 760px) { /*Aquí configuramos como quedarian los botones DEMO&CODE en la versión escritorio*/
     .buttons {
         bottom: 1em;
     }

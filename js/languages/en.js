@@ -58,8 +58,7 @@ export default {
         
     proj1_title: "MONBANK, Banking Simulation (work in progress)",
     proj1_type: "PROJECT OVERVIEW AND FEATURES",
-    proj1_desc:
-        "MONBANK is a simulated banking platform built with a static frontend and data persistence powered by a JSON file.\nThe interface is fully responsive and leverages Chart.js for dynamic data visualization, delivering a modern and seamless user experience.\nThe system includes client-side simulated authentication using localStorage, enabling local sessions without the need for a backend. Financial transactions—such as creating, listing, and deleting movements—are managed directly in JSON, filtered by user and sorted chronologically.\nBalance evolution is displayed through a line chart that updates automatically with each change.\Additional features include a contact form that stores user inquiries, with options to view and delete messages. Dark mode is implemented with local persistence, enhancing accessibility and personalization.\mTo elevate the user experience, the project incorporates a loading spinner and CSS animations for smoother interactions.",
+    proj1_desc:"MONBANK is a simulated banking platform built with a static frontend and data persistence powered by a JSON file.\nThe interface is fully responsive and leverages Chart.js for dynamic data visualization, delivering a modern and seamless user experience.\nThe system includes client-side simulated authentication using localStorage, enabling local sessions without the need for a backend. Financial transactions—such as creating, listing, and deleting movements—are managed directly in JSON, filtered by user and sorted chronologically.\nBalance evolution is displayed through a line chart that updates automatically with each change.\Additional features include a contact form that stores user inquiries, with options to view and delete messages. Dark mode is implemented with local persistence, enhancing accessibility and personalization.\mTo elevate the user experience, the project incorporates a loading spinner and CSS animations for smoother interactions.",
 
     
     proj2_title: "MonSnake Game",
@@ -67,6 +66,9 @@ export default {
     proj2_desc: "A modern version of the classic Snake game, built from scratch using the LibGDX framework.\nThis project showcases skills in cross-platform game development, 2D graphics rendering, game state management, and user experience design.\nKey Features:\n- Dual scoring system: Two types of apples with different point values (10 and 20 points).\n- Progression system: Dynamic levels every 50 points with visual environment changes.\n- Life system: Three-life management with self-collision detection.\n- Record tracking: Interactive HUD that detects and celebrates new personal records with visual effects (golden color and flashing).\n- Custom visual interface: Graphics specifically designed for the project.\n- Game Over and restart: Complete game-ending and restart system.",
 
 
+    proj3_title: "GastroReservas",
+    proj3_type: "PROJECT OVERVIEW AND FEATURES",
+    proj3_desc: "Overview:\nGastroReservas is a full‑stack platform designed to streamline interactions between customers and restaurants through an online reservation system. The application manages two distinct user roles: customers, who can explore restaurants and make reservations, and administrators, who oversee establishment operations, manage availability, and confirm incoming booking requests.\nTechnical Architecture:\nThe backend is built with PHP 8, using object‑oriented programming and following the MVC (Model‑View‑Controller) pattern to ensure a clear separation between business logic, data handling, and presentation layers. The MySQL database features a normalized relational design with three main entities—users, restaurants, and reservations—linked through foreign keys that ensure referential integrity.",
 
 
     // Buttons
